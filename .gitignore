@@ -1,6 +1,10 @@
 # Ignore IDE files
-/.idea
+.idea
 
 # Ignore data files
-/BitcoinHeistData.csv
-/data.zip
+data
+*.csv
+data.zip
+
+# docs
+*.pdf
