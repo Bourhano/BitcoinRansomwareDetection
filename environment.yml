@@ -1,0 +1,28 @@
+name: ramp-bitcoin-heist
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - scikit-learn>=0.22
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  # - click
+
+  # Extra requirements
+  # - tensorflow-gpu
+  # - pytorch
+  # - keras
+  # - lightgbm
+
+  - pip
+  - pip:
+    - osfclient
+    - ramp-workflow
+    - ramp-utils
+
+    # Extra requirements pip
+    # - xgboost
+    # - catboost
