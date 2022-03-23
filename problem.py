@@ -1,13 +1,10 @@
 import os
-import string
 from glob import glob
 
 import pandas as pd
 import numpy as np
-import datetime
 
-from scipy.stats import boxcox
-from tqdm.notebook import tqdm
+
 from sklearn.metrics import recall_score
 from sklearn.model_selection import ShuffleSplit
 
@@ -18,7 +15,8 @@ problem_title = "Bitcoin Ransomeware Detection"
 
 _prediction_label_names = [0, 1]
 
-Predictions = rw.prediction_types.make_multiclass(label_names=_prediction_label_names)
+Predictions = rw.prediction_types.make_multiclass(
+    label_names=_prediction_label_names)
 workflow = rw.workflows.Estimator()
 
 
@@ -32,11 +30,11 @@ class RECALL(BaseScoreType):
         self.precision = precision
 
     def __call__(self, y_true, y_pred):
-         
+
         # y_true = np.argmax(y_true, axis=1)
-        # y_pred = np.argmax(y_pred, axis=1) 
-        
-        score = recall_score(y_true=y_true, y_pred = y_pred, average='weighted')
+        # y_pred = np.argmax(y_pred, axis=1)
+
+        score = recall_score(y_true=y_true, y_pred=y_pred, average='weighted')
 
         return score
 
@@ -48,19 +46,19 @@ score_types = [
     rw.score_types.NegativeLogLikelihood(name='nll'),
     # rw.score_types.BrierScore(name='brier_score')
 ]
-  
+
 
 _ignore_column_names = ['label']
+
 
 def _get_data(path=".", split="train"):
 
     f_name = str(split) + ".csv"
     dataset = pd.read_csv(os.path.join(path, 'data', f_name), sep=" ")
-    
-    
+
     X = dataset.drop(_ignore_column_names, axis=1)
-    y = np.array(np.where(dataset["label"]=="white", 0, 1))
-    
+    y = np.array(np.where(dataset["label"] == "white", 0, 1))
+
     # X = X_df.to_numpy()
     # y = np.reshape(y_df.to_numpy(), (y_df.shape, ))
     return X, y
