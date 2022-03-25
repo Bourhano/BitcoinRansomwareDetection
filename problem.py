@@ -53,7 +53,7 @@ _ignore_column_names = ['label']
 def _get_data(path=".", split="train"):
 
     f_name = str(split) + ".csv"
-    dataset = pd.read_csv(os.path.join(path, 'data', f_name), sep=" ")
+    dataset = pd.read_csv(os.path.join(path, 'data', f_name), sep=",")
 
     X = dataset.drop(_ignore_column_names, axis=1)
     y = np.array(np.where(dataset["label"] == "white", 0, 1))
