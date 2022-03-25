@@ -2,7 +2,6 @@ import os
 
 import pandas as pd
 import numpy as np
-from datetime import date
 
 from sklearn.metrics import recall_score
 from sklearn.model_selection import ShuffleSplit
