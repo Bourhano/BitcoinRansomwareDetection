@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 import numpy as np
-
+from datetime import date
 
 from sklearn.metrics import recall_score
 from sklearn.model_selection import ShuffleSplit
@@ -47,28 +47,31 @@ score_types = [
 ]
 
 
-_ignore_column_names = ['label']
+_ignore_column_names = ['address', 'label']
 
 
-def _get_data(path=".", split="train"):
+def _get_data(path, f_name):
 
-    f_name = str(split) + ".csv"
     dataset = pd.read_csv(os.path.join(path, 'data', f_name), sep=",")
-
+    # print(dataset)
     X = dataset.drop(_ignore_column_names, axis=1)
     y = np.array(np.where(dataset["label"] == "white", 0, 1))
 
+    # print(X.columns)
+    # print(y)
     # X = X_df.to_numpy()
     # y = np.reshape(y_df.to_numpy(), (y_df.shape, ))
     return X, y
 
 
 def get_train_data(path="."):
-    return _get_data(path, "train")
+    f_name = "train.csv"
+    return _get_data(path, f_name)
 
 
 def get_test_data(path="."):
-    return _get_data(path, "test")
+    f_name = "test.csv"
+    return _get_data(path, f_name)
 
 
 def get_cv(X, y):
