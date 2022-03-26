@@ -2,7 +2,6 @@ import os
 
 import pandas as pd
 
-from sklearn.metrics import recall_score
 from sklearn.model_selection import ShuffleSplit
 
 import rampwf as rw
