@@ -8,6 +8,7 @@ from sklearn.pipeline import Pipeline, make_pipeline
 from pandas import Timestamp
 from sklearn.ensemble import RandomForestClassifier
 
+
 def _process_time_feature(X):
     '''From the columns "year" and "day", we create a datetime
     column day/month/year'''
@@ -18,9 +19,9 @@ def _process_time_feature(X):
     dat_temp = []
     for i in range(X.shape[0]):
         aux = date.fromordinal(
-                 date(years[i], 1, 1).toordinal()
-                + days[i]-1).strftime('%d/%m/%Y')
-        
+            date(years[i], 1, 1).toordinal()
+            + days[i]-1).strftime('%d/%m/%Y')
+
         dat_temp.append(aux)
 
     X['time'] = pd.to_datetime(dat_temp)
@@ -42,7 +43,7 @@ def get_estimator():
 
         def transform(self, X):
             aux = (X-self.today).dt.days
-            return aux.values.reshape((len(aux),-1))
+            return aux.values.reshape((len(aux), -1))
             # return X.apply(lambda x: (x - self.today).days).reshape((X.shape[0], -1))
 
     '''A pipeline that first computes age, and standardizes it'''
@@ -63,7 +64,8 @@ def get_estimator():
     ])
 
     '''Now, we define a classifier'''
-    classifier = RandomForestClassifier(n_estimators=100, random_state=42,class_weight='balanced')
+    classifier = RandomForestClassifier(
+        n_estimators=100, random_state=42, class_weight='balanced')
 
     '''We wrap all in a pipeline'''
     pipeline = Pipeline(steps=[
