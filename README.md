@@ -1,17 +1,8 @@
-# Student challenge
-Original authors : Rihem Mansri - Mohamed Issa - Mootez Dakhlaoui - Bourhan Dernayka - Joel Pascal Soffo - Ronny Tonato
-
-As part of the Data Camp course, within the [Data Science Masters at Institut Polytechnique
-de Paris in collaboration with University of
-Paris-Saclay](https://datascience-x-master-paris-saclay.fr/le-master/structure-des-enseignements/),
-students were required to build a data challenge addressing some social/science/business
-problem using data obtained from external sources. This is one example of a student
-challenge, showcased on the ramp.studio server.
-
 # Detection of Ransomware Attack Families via Bitcoin Transactions
 
-Over the past four years, the ransom demanded by hackers increased by a shocking 2,966.66 percent. In 2021, the average ransom demand reached $ 220,298 — up 43 percent compared to 2020. The explosive growth in ransomware demand was in 2019, where the average ransom demand grew 14 times, up from 6,000 in 2018 to 84,000 by the end of the year. In this challenge, the goal will be to create a model that is able to detect whether the given addresses belong to any of the attacker families by tracing the cryptocurrency transactions in the entire Bitcoin transaction graph from 2009 to 2018.
+Authors : Rihem Mansri - Mohamed Issa - Mootez Dakhlaoui - Bourhan Dernayka - Joel Pascal Soffo - Ronny Tonato
 
+Over the past four years, the ransom demanded by hackers increased by a shocking 2,966.66 percent. In 2021, the average ransom demand reached $ 220,298 — up 43 percent compared to 2020. The explosive growth in ransomware demand was in 2019, where the average ransom demand grew 14 times, up from 6,000 in 2018 to 84,000 by the end of the year. In this challenge, the goal will be to create a model that is able to detect whether the given addresses belong to any of the attacker families by tracing the cryptocurrency transactions in the entire Bitcoin transaction graph from 2009 to 2018.
 
 ## Getting started
 
