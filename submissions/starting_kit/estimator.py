@@ -44,7 +44,6 @@ def get_estimator():
         def transform(self, X):
             aux = (X-self.today).dt.days
             return aux.values.reshape((len(aux), -1))
-            # return X.apply(lambda x: (x - self.today).days).reshape((X.shape[0], -1))
 
     '''A pipeline that first computes age, and standardizes it'''
     scaled_age_encoder = FunctionTransformer(
