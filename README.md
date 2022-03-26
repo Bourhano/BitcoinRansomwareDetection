@@ -1,5 +1,5 @@
 # Student challenge
-Original authors : Rihem Mansri, Mohamed Issa, Mootez Dakhlaoui, Bourhan Dernayka, Joel Pascal Soffo, Ronny Tonato
+Original authors : Rihem Mansri - Mohamed Issa - Mootez Dakhlaoui - Bourhan Dernayka - Joel Pascal Soffo - Ronny Tonato
 
 As part of the Data Camp course, within the [Data Science Masters at Institut Polytechnique
 de Paris in collaboration with University of
