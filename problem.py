@@ -1,4 +1,5 @@
 import os
+from glob import glob
 
 import pandas as pd
 
@@ -23,10 +24,14 @@ score_types = [
 _ignore_column_names = 'address'
 _target_column_name = 'label'
 
+def get_file_list_from_dir(*, path, filename):
+    data_files = sorted(glob(os.path.join(path, "data/public", filename)))
+    return data_files
 
 def _get_data(path, f_name):
-
-    dataset = pd.read_csv(os.path.join(path, 'data/public', f_name), sep=",")
+    
+    data_files = get_file_list_from_dir(path=path, filename=f_name)
+    dataset = pd.concat((pd.read_csv(f) for f in data_files))
 
     X = dataset.drop([_target_column_name] + [_ignore_column_names], axis=1)
     y = dataset[_target_column_name].values
