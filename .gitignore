@@ -5,6 +5,7 @@
 data
 *.csv
 data.zip
+*data
 
 # docs
 *.pdf

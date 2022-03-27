@@ -22,7 +22,10 @@ dependencies:
     - osfclient
     - ramp-workflow
     - ramp-utils
+    - download
 
-    # Extra requirements pip
-    # - xgboost
-    # - catboost
+
+#     Extra requirements pip
+#     - xgboost
+#     - catboost
+#    - zipfile
