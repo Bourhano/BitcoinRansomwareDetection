@@ -1,5 +1,6 @@
 # Ignore IDE files
 .idea
+.ipynb_checkpoints
 
 # Ignore data files
 data
