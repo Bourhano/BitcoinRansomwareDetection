@@ -9,7 +9,7 @@ Over the past four years, the ransom demanded by hackers increased by a shocking
 ### Install
 
 To run a submission and the notebook you will need the dependencies listed
-in `requirements.txt`. You can install install the dependencies with the
+in `requirements.txt`. You can install the dependencies with the
 following command-line:
 
 ```bash
@@ -21,7 +21,26 @@ usage.
 
 ### Challenge description
 
-Get started with the [dedicated notebook](bitcoin_heist_starting_kit.ipynb)
+Get started with the [dedicated notebook](bitcoin_heist_starting_kit.ipynb). It contains the following:
+
+##### Table of Contents
+
+1. Problem statement
+   - Ransomware attacks
+   - Ransom and Bitcoin &#x20BF;
+   - Taking action
+
+2. Data Exploration
+   - Extracted features
+   - Features exploration
+   - Feature by feature exploration
+    
+3. Workflow
+
+4. Submission details
+
+5. RAMP submission
+
 
 
 ### Test a submission

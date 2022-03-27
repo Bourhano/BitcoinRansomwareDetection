@@ -1,13 +1,11 @@
 import os
 from glob import glob
-
 import pandas as pd
-
 from sklearn.model_selection import ShuffleSplit
 
 import rampwf as rw
 
-problem_title = "Bitcoin Ransomeware Detection"
+problem_title = "Bitcoin Ransomware Detection"
 
 _prediction_label_names = [-1, 1]
 

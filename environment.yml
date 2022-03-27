@@ -9,13 +9,14 @@ dependencies:
   - pandas
   - matplotlib
   - seaborn
-  # - click
 
-  # Extra requirements
+  # Extra requirements (to be modified
+  #  depending on participants' needs):
   # - tensorflow-gpu
   # - pytorch
   # - keras
   # - lightgbm
+  # - click
 
   - pip
   - pip:
@@ -28,4 +29,4 @@ dependencies:
 #     Extra requirements pip
 #     - xgboost
 #     - catboost
-#    - zipfile
+#     - zipfile

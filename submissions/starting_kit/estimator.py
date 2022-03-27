@@ -1,19 +1,21 @@
 import numpy as np
 import pandas as pd
-from sklearn.compose import ColumnTransformer
 from datetime import date
-from sklearn.base import TransformerMixin, BaseEstimator
+
 from sklearn.preprocessing import StandardScaler, FunctionTransformer
 from sklearn.pipeline import Pipeline, make_pipeline
-from pandas import Timestamp
+from sklearn.compose import ColumnTransformer
+from sklearn.base import TransformerMixin, BaseEstimator
 from sklearn.linear_model import LogisticRegression
 
 
 def _process_time_feature(X):
-    '''From the columns "year" and "day", we create a datetime
-    column day/month/year'''
-    '''For example, for year=2017 and day=130,
-    we will get 10/05/2017'''
+    """
+    From the columns "year" and "day", we create a datetime
+    column day/month/year
+    For example, for year=2017 and day=130,
+    we will get 10/05/2017
+    """
     years = np.array(X['year'])
     days = np.array(X['day'])
     dat_temp = []
@@ -37,7 +39,7 @@ def get_estimator():
                     days of columns containing dates'''
     class AgeEncoder(TransformerMixin, BaseEstimator):
         def fit(self, X, y=None):
-            self.today = Timestamp.today()
+            self.today = pd.Timestamp.today()
             return self
 
         def transform(self, X):
