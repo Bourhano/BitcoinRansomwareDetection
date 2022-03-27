@@ -6,7 +6,7 @@ from sklearn.base import TransformerMixin, BaseEstimator
 from sklearn.preprocessing import StandardScaler, FunctionTransformer
 from sklearn.pipeline import Pipeline, make_pipeline
 from pandas import Timestamp
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 
 
 def _process_time_feature(X):
@@ -62,8 +62,7 @@ def get_estimator():
     ])
 
     '''Now, we define a classifier'''
-    classifier = RandomForestClassifier(
-        n_estimators=100, random_state=42, class_weight='balanced')
+    classifier = LogisticRegression()
 
     '''We wrap all in a pipeline'''
     pipeline = Pipeline(steps=[
