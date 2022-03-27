@@ -8,7 +8,7 @@ import rampwf as rw
 
 problem_title = "Bitcoin Ransomeware Detection"
 
-_prediction_label_names = [0, 1]
+_prediction_label_names = [-1, 1]
 
 Predictions = rw.prediction_types.make_multiclass(
     label_names=_prediction_label_names)
@@ -26,7 +26,7 @@ _target_column_name = 'label'
 
 def _get_data(path, f_name):
 
-    dataset = pd.read_csv(os.path.join(path, 'data', f_name), sep=",")
+    dataset = pd.read_csv(os.path.join(path, 'data/public', f_name), sep=",")
 
     X = dataset.drop([_target_column_name] + [_ignore_column_names], axis=1)
     y = dataset[_target_column_name].values
@@ -35,12 +35,12 @@ def _get_data(path, f_name):
 
 
 def get_train_data(path="."):
-    f_name = "train.csv"
+    f_name = "train.csv.gz"
     return _get_data(path, f_name)
 
 
 def get_test_data(path="."):
-    f_name = "test.csv"
+    f_name = "test.csv.gz"
     return _get_data(path, f_name)
 
 
