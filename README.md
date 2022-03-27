@@ -2,7 +2,7 @@
 
 Authors: Mootez Dakhlaoui - Bourhan Dernayka - - Mohamed Issa - Rihem Mansri - Joel Pascal Soffo - Ronny Tonato
 
-Over the past four years, the ransom demanded by hackers increased by a shocking 2,966.66 percent. In 2021, the average ransom demand reached $ 220,298 — up 43 percent compared to 2020. The explosive growth in ransomware demand was in 2019, where the average ransom demand grew 14 times, up from 6,000 in 2018 to 84,000 by the end of the year. In this challenge, the goal will be to create a model that is able to detect whether the given addresses belong to any of the attacker families by tracing the cryptocurrency transactions in the entire Bitcoin transaction graph from 2009 to 2018.
+Over the past four years, the ransom demanded by hackers increased by a shocking 2,966.66 percent. In 2021, the average ransom demand reached \$ 220,298 — up 43 percent compared to 2020. The explosive growth in ransomware demand was in 2019, where the average ransom demand grew 14 times, up from \$ 6,000 in 2018 to \$ 84,000 by the end of the year. In this challenge, the goal will be to create a model that is able to detect whether the given addresses belong to any of the attacker families by tracing the cryptocurrency transactions in the entire Bitcoin transaction graph from 2009 to 2018.
 
 ## Getting started
 
