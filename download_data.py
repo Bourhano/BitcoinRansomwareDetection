@@ -43,9 +43,9 @@ X_train, X_test, Y_train, Y_test = train_test_split(
     stratify=Y_public, shuffle=True
 )
 
-X_hidden['label'] = Y_hidden
-X_train['label'] = Y_train
-X_test['label'] = Y_test
+X_hidden.loc[:, 'label'] = Y_hidden
+X_train.loc[:, 'label'] = Y_train
+X_test.loc[:, 'label'] = Y_test
 
 private_set = X_hidden
 public_train = X_train
