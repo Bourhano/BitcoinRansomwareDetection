@@ -51,11 +51,11 @@ private_set = X_hidden
 public_train = X_train
 public_test = X_test
 
-private_set.to_csv(os.path.join(private_path, "private.csv.gzip"),
+private_set.to_csv(os.path.join(private_path, "private.csv.gz"),
                    index=False, compression="gzip")
-public_train.to_csv(os.path.join(public_path, "train.csv.gzip"),
+public_train.to_csv(os.path.join(public_path, "train.csv.gz"),
                     index=False, compression="gzip")
-public_test.to_csv(os.path.join(public_path, "test.csv.gzip"),
+public_test.to_csv(os.path.join(public_path, "test.csv.gz"),
                    index=False, compression="gzip")
 
 os.remove(file_path)
