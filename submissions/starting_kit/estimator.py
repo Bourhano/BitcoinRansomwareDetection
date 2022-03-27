@@ -21,7 +21,6 @@ def _process_time_feature(X):
         aux = date.fromordinal(
             date(years[i], 1, 1).toordinal()
             + days[i]-1).strftime('%d/%m/%Y')
-
         dat_temp.append(aux)
 
     X['time'] = pd.to_datetime(dat_temp)
