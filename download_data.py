@@ -14,12 +14,12 @@ file_path = os.path.join(private_path, file_name)
 
 try:
     os.stat(private_path)
-except OSError as _:
+except OSError:
     os.mkdir(private_path)
 
 try:
     os.stat(public_path)
-except OSError as _:
+except OSError:
     os.mkdir(public_path)
 
 print("Downloading the data file. This could take a couple of minutes...")
