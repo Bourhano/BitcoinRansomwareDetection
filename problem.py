@@ -24,12 +24,13 @@ score_types = [
 _ignore_column_names = 'address'
 _target_column_name = 'label'
 
+
 def get_file_list_from_dir(*, path, filename):
     data_files = sorted(glob(os.path.join(path, "data/public", filename)))
     return data_files
 
+
 def _get_data(path, f_name):
-    
     data_files = get_file_list_from_dir(path=path, filename=f_name)
     dataset = pd.concat((pd.read_csv(f) for f in data_files))
 
